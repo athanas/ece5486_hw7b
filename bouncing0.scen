@@ -1,0 +1,25 @@
+#
+# nodes: 1, max time: 27.000000, max x: 600.00, max y: 600.00
+# nominal range: 100.00 link bw: 54000000.00
+# pause: 30.00, min speed 1.50 max speed: 4.50
+
+$node_(1) set X_ 500.0
+$node_(1) set Y_ 200.0
+$node_(1) set Z_ 0.00
+
+$ns_ at 0.00 "$node_(1) setdest 200.0 250.0 35.0" 
+$ns_ at 0.00 "$node_(1) setdest 200.0 250.0 35.0" 
+$ns_ at 5.00 "$node_(1) setdest 700.0 250.0 35.0" 
+$ns_ at 5.00 "$node_(1) setdest 700.0 250.0 35.0" 
+$ns_ at 10.00 "$node_(1) setdest 200.0 250.0 35.0" 
+$ns_ at 10.00 "$node_(1) setdest 200.0 250.0 35.0" 
+$ns_ at 15.00 "$node_(1) setdest 700.0 250.0 35.0"
+$ns_ at 15.00 "$node_(1) setdest 700.0 250.0 35.0"
+$ns_ at 20.00 "$node_(1) setdest 200.0 250.0 35.0"
+$ns_ at 20.00 "$node_(1) setdest 200.0 250.0 35.0"
+$ns_ at 25.00 "$node_(1) setdest 700.0 250.0 35.0"
+$ns_ at 25.00 "$node_(1) setdest 700.0 250.0 35.0"
+$ns_ at 60.00 "$node_(1) setdest 200.0 250.0 35.0"
+$ns_ at 70.00 "$node_(1) setdest 500.0 650.0 35.0"
+$ns_ at 100.00 "$node_(1) setdest 200.0 250.0 35.0"
+

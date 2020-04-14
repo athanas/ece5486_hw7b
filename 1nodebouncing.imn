@@ -63,22 +63,6 @@ node n2 {
     labelcoords {135.0 286.0}
     interface-peer {eth0 n9}
     custom-config {
-	custom-config-id service:UserDefined
-	custom-command UserDefined
-	config {
-	files=('mgen_n2.sh', )
-	starttime=1
-	}
-    }
-    custom-config {
-	custom-config-id service:UserDefined:mgen_n2.sh
-	custom-command mgen_n2.sh
-	config {
-	mgen "2.0 on 1 tcp src 5000 dst a::1/10000 Periodic [10 100] count 5000"
-	
-	}
-    }
-    custom-config {
 	custom-config-id service:zebra
 	custom-command zebra
 	config {
@@ -109,14 +93,22 @@ node n2 {
 	  redistribute connected
 	!
 	
-	interface eth0
-	  ip address 172.16.0.2/32
-	  ipv6 address a::2/128
-	!
-	router ospf6
-	  router-id 172.16.0.2
-	  interface eth0 area 0.0.0.0
-	!
+	
+	}
+    }
+    custom-config {
+	custom-config-id service:UserDefined
+	custom-command UserDefined
+	config {
+	files=('mgen_n2.sh', )
+	starttime=1
+	}
+    }
+    custom-config {
+	custom-config-id service:UserDefined:mgen_n2.sh
+	custom-command mgen_n2.sh
+	config {
+	mgen "2.0 on 1 tcp src 5000 dst a::1/10000 Periodic [10 100] count 5000"
 	
 	}
     }
@@ -167,8 +159,8 @@ node n1 {
 	!
     }
     canvas c1
-    iconcoords {480.0 250.0}
-    labelcoords {480.0 282.0}
+    iconcoords {700.0 250.0}
+    labelcoords {700.0 282.0}
     interface-peer {eth0 n9}
     custom-config {
 	custom-config-id service:UserDefined

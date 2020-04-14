@@ -28,14 +28,14 @@ node n9 {
 	custom-config-id ns2script
 	custom-command {10 3 11 10 10 10 10 10}
 	config {
-	file=/home/packit/hw7b/bouncing.scen
+	file=/home/packit/ece5486_hw7b/bouncing.scen
 	refresh_ms=250
 	loop=0
 	autostart=
 	map=
-	script_start=
-	script_pause=
-	script_stop=
+	script_start=/home/packit/ece5486_hw7b/bouncing.sh
+	script_pause=/home/packit/ece5486_hw7b/stop_bouncing.sh
+	script_stop=/home/packit/ece5486_hw7b/stop_bouncing.sh
 	}
     }
     canvas c1
@@ -67,7 +67,6 @@ node n2 {
 	custom-command UserDefined
 	config {
 	files=('mgen_n2.sh', )
-	cmdup=('mgen_n2.sh', )
 	starttime=1
 	}
     }
@@ -168,15 +167,14 @@ node n1 {
 	!
     }
     canvas c1
-    iconcoords {700.0 250.0}
-    labelcoords {700.0 282.0}
+    iconcoords {480.0 250.0}
+    labelcoords {480.0 282.0}
     interface-peer {eth0 n9}
     custom-config {
 	custom-config-id service:UserDefined
 	custom-command UserDefined
 	config {
 	files=('relay_ipv6.py', )
-	cmdup=('python relay_ipv6.py', )
 	}
     }
     custom-config {
@@ -340,7 +338,6 @@ node n3 {
 	custom-command UserDefined
 	config {
 	files=('gatherer_ipv6.py', )
-	cmdup=('python gatherer_ipv6.py', )
 	meta=Gatherer
 	}
     }

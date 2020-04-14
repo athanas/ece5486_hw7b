@@ -28,7 +28,7 @@ node n9 {
 	custom-config-id ns2script
 	custom-command {10 3 11 10 10 10 10 10}
 	config {
-	file=/home/packit/hw7b/bouncing.scen
+	file=/home/packit/ece5486_hw7b/bouncing.scen
 	refresh_ms=250
 	loop=0
 	autostart=
